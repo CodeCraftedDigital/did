@@ -1,0 +1,82 @@
+---
+const navLinks = [
+  { href: "#applications", label: "Applications" },
+  { href: "#how-it-works", label: "How It Works" },
+  { href: "#performance", label: "Performance" },
+  { href: "#projects", label: "Projects" },
+  { href: "#contact", label: "Contact" },
+];
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-dark/90 backdrop-blur-sm border-b border-white/5">
+  <div class="container-custom">
+    <nav class="flex items-center justify-between h-16 lg:h-20">
+      <a href="/" class="flex items-center">
+        <img 
+          src="/images/DamItDams-Logo-Light.svg" 
+          alt="Dam-It-Dams Logo" 
+          class="h-6 lg:h-8 w-auto"
+        />
+      </a>
+      
+      <div class="hidden lg:flex items-center gap-8">
+        {navLinks.map((link) => (
+          <a 
+            href={link.href} 
+            class="text-sm text-gray-light hover:text-primary-light transition-colors uppercase tracking-wider"
+          >
+            {link.label}
+          </a>
+        ))}
+      </div>
+      
+      <a href="#contact" class="hidden lg:inline-flex btn-primary text-xs py-2 px-4">
+        Get A Quote
+      </a>
+      
+      <button 
+        id="mobile-menu-btn"
+        class="lg:hidden p-2 text-light"
+        aria-label="Toggle menu"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </nav>
+  </div>
+  
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="lg:hidden hidden bg-dark-light border-t border-white/5">
+    <div class="container-custom py-4 flex flex-col gap-4">
+      {navLinks.map((link) => (
+        <a 
+          href={link.href} 
+          class="text-sm text-gray-light hover:text-primary-light transition-colors uppercase tracking-wider py-2"
+        >
+          {link.label}
+        </a>
+      ))}
+      <a href="#contact" class="btn-primary text-xs py-2 px-4 text-center mt-2">
+        Get A Quote
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  menuBtn?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+  
+  // Close menu when clicking on links
+  const mobileLinks = mobileMenu?.querySelectorAll('a');
+  mobileLinks?.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu?.classList.add('hidden');
+    });
+  });
+</script>

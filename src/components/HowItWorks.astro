@@ -1,0 +1,89 @@
+---
+const steps = [
+  {
+    number: "1",
+    image: "/images/HIW-Images-01.jpg",
+    title: "Set Up",
+    description: "Position and secure the cofferdam along the intended control line."
+  },
+  {
+    number: "2",
+    image: "/images/HIW-Images-02.jpg",
+    title: "Fill With Water",
+    description: "Fill on-site using pumps or gravity flow to create the barrier mass."
+  },
+  {
+    number: "3",
+    image: "/images/HIW-Images-03.jpg",
+    title: "Control The Area",
+    description: "Fill on-site using pumps or gravity flow to create the barrier mass."
+  },
+  {
+    number: "4",
+    image: "/images/HIW-Images-04.jpg",
+    title: "Drain & Remove",
+    description: "Drain, deflate, roll up, and relocate after completion."
+  }
+];
+---
+
+<section id="how-it-works" class="py-16 lg:py-24 bg-dark relative overflow-hidden">
+  <!-- Background Image -->
+  <div class="absolute inset-0 opacity-20">
+    <img 
+      src="/images/Flood-Water-Web.jpg" 
+      alt="Water background"
+      class="w-full h-full object-cover"
+    />
+  </div>
+  
+  <div class="relative z-10 container-custom">
+    <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 mb-12">
+      <div class="lg:max-w-lg">
+        <p class="section-label">How It Works</p>
+        <h2 class="text-3xl lg:text-4xl font-bold">
+          <span class="italic">Simple.</span> <span class="text-primary-light italic">Fast.</span> <span class="italic">Effective.</span>
+        </h2>
+      </div>
+      <div class="lg:max-w-md">
+        <p class="text-gray-light leading-relaxed">
+          The system uses on-site water to form a stable temporary barrier, then drains and removes cleanly when the project is complete.
+        </p>
+      </div>
+    </div>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-12">
+      {steps.map((step) => (
+        <div class="group">
+          <div class="relative overflow-hidden rounded-lg mb-4 aspect-[4/3]">
+            <img 
+              src={step.image} 
+              alt={step.title}
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary-light font-bold text-sm">{step.number}.</span>
+            <div>
+              <h3 class="text-primary-light text-sm uppercase tracking-wider font-semibold mb-2">
+                {step.title}
+              </h3>
+              <p class="text-gray-light text-sm leading-relaxed">
+                {step.description}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+    
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="#contact" class="btn-primary">
+        Get A Quote
+      </a>
+      <a href="#applications" class="btn-primary-filled">
+        See Applications
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,105 @@
+---
+const navigation = [
+  { href: "#applications", label: "Applications" },
+  { href: "#how-it-works", label: "How It Works" },
+  { href: "#projects", label: "Projects" },
+  { href: "#contact", label: "Contact" }
+];
+
+const contact = {
+  address: "646 E. Reid Road, Grand Blanc MI, 48439",
+  email: "sales@damitdams.com",
+  phone: "810-695-695",
+  fax: "810-695-1695"
+};
+---
+
+<footer class="bg-dark-light py-16 lg:py-20 border-t border-white/5">
+  <div class="container-custom">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+      <!-- Logo & Description -->
+      <div class="lg:col-span-1">
+        <img 
+          src="/images/DamItDams-Logo-Light.svg" 
+          alt="Dam-It-Dams Logo"
+          class="h-8 mb-4"
+        />
+        <p class="text-xs text-gray-light uppercase tracking-wider mb-4">
+          Portable Water-Filled Cofferdams
+        </p>
+        <p class="text-sm text-gray-light leading-relaxed">
+          Dam-It Dams is a world-class provider of water-filled cofferdams for diverse projects. An award-winning leader, we deliver innovative dewatering and water diversion solutions that ensure safe project initiation, efficiency, and successful completion.
+        </p>
+      </div>
+      
+      <!-- Navigation -->
+      <div>
+        <h4 class="text-sm font-semibold text-gray-light uppercase tracking-wider mb-4">
+          Navigation
+        </h4>
+        <ul class="space-y-3">
+          {navigation.map((link) => (
+            <li>
+              <a 
+                href={link.href}
+                class="text-sm text-gray-light hover:text-primary-light transition-colors"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+      
+      <!-- Contact -->
+      <div>
+        <h4 class="text-sm font-semibold text-gray-light uppercase tracking-wider mb-4">
+          Contact
+        </h4>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-2 text-sm text-gray-light">
+            <svg class="w-4 h-4 mt-0.5 text-primary-light flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <span>{contact.address}</span>
+          </li>
+          <li class="flex items-start gap-2 text-sm text-gray-light">
+            <svg class="w-4 h-4 mt-0.5 text-primary-light flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <a href={`mailto:${contact.email}`} class="hover:text-primary-light transition-colors">
+              {contact.email}
+            </a>
+          </li>
+          <li class="flex items-start gap-2 text-sm text-gray-light">
+            <svg class="w-4 h-4 mt-0.5 text-primary-light flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            <span>{contact.phone}</span>
+          </li>
+          <li class="flex items-start gap-2 text-sm text-gray-light">
+            <svg class="w-4 h-4 mt-0.5 text-primary-light flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+            </svg>
+            <span>{contact.fax}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Bottom Bar -->
+    <div class="border-t border-white/5 pt-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray">
+        <p>&copy; Copyright 2026 Dam-It Dams Inc. - All Rights Reserved.</p>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:text-primary-light transition-colors">Terms And Conditions</a>
+          <span class="text-gray/30">&bull;</span>
+          <a href="#" class="hover:text-primary-light transition-colors">Privacy Policy</a>
+          <span class="text-gray/30">&bull;</span>
+          <span>Powered By Code Crafted Digital</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

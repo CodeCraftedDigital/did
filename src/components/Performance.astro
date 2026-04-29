@@ -1,0 +1,52 @@
+---
+const benefits = [
+  {
+    icon: "/icons/Reusable-by-Design.svg",
+    title: "Reusable By Design",
+    description: "Built tough to be used again and again, delivering long-term value."
+  },
+  {
+    icon: "/icons/A-Cleaner-Alternative.svg",
+    title: "A Cleaner Alternative",
+    description: "No earthen fill. No heavy equipment. Lower environmental impact."
+  },
+  {
+    icon: "/icons/Fast-Deployment.svg",
+    title: "Fast Deployment",
+    description: "Lightweight and portable for rapid response on demanding job sites."
+  },
+  {
+    icon: "/icons/Contractor-Friendly-Support.svg",
+    title: "Contractor-Friendly Support",
+    description: "Expert guidance, training, and on-site support you can count on."
+  }
+];
+---
+
+<section id="performance" class="py-16 lg:py-24 bg-dark-light">
+  <div class="container-custom">
+    <div class="text-center mb-12 lg:mb-16">
+      <p class="section-label">Performance</p>
+      <h2 class="text-3xl lg:text-4xl font-bold">
+        Engineered for <span class="text-primary-light">Performance.</span><br />
+        Built for <span class="text-primary-light">Contractors.</span>
+      </h2>
+    </div>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+      {benefits.map((benefit) => (
+        <div class="bg-dark border border-white/5 rounded-lg p-6 lg:p-8 hover:border-primary-light/30 transition-colors">
+          <div class="w-14 h-14 mb-4 flex items-center justify-center">
+            <img src={benefit.icon} alt={benefit.title} class="w-12 h-12 object-contain" />
+          </div>
+          <h3 class="text-primary-light text-xs uppercase tracking-wider font-semibold mb-3">
+            {benefit.title}
+          </h3>
+          <p class="text-gray-light text-sm leading-relaxed">
+            {benefit.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
