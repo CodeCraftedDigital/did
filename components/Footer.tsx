@@ -1,0 +1,138 @@
+const navigation = [
+  { href: "#applications", label: "Applications" },
+  { href: "#how-it-works", label: "How It Works" },
+  { href: "#projects", label: "Projects" },
+  { href: "#contact", label: "Contact" },
+];
+
+const contact = {
+  address: "646 E. Reid Road, Grand Blanc\nMI, 48439",
+  email: "sales@damitdams.com",
+  phone: "810-695-695",
+  fax: "810-695-1695",
+};
+
+export default function Footer() {
+  return (
+    <footer className="bg-dark-light py-12 lg:py-16">
+      <div className="container-custom">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mb-10">
+          {/* Logo & Description */}
+          <div>
+            <h3 className="text-white text-lg font-bold tracking-wide mb-1">
+              DAM-IT-DAMS
+            </h3>
+            <p className="text-[10px] text-primary-light italic mb-4">
+              Portable Water-Filled Cofferdams
+            </p>
+            <p className="text-xs text-white/50 leading-relaxed">
+              Dam-It Dams is a world-class provider of water-filled cofferdams
+              for diverse projects. An award-winning leader, we deliver
+              innovative dewatering and water diversion solutions that ensure
+              safe project initiation, efficiency, and successful completion.
+            </p>
+          </div>
+
+          {/* Navigation */}
+          <div>
+            <h4 className="text-[10px] font-bold text-white/40 uppercase tracking-[0.2em] mb-4">
+              Navigation
+            </h4>
+            <ul className="space-y-2">
+              {navigation.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    className="text-xs text-white/60 hover:text-primary-light transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="text-[10px] font-bold text-white/40 uppercase tracking-[0.2em] mb-4">
+              Contact
+            </h4>
+            <ul className="space-y-2">
+              <li className="flex items-start gap-2 text-xs text-white/60">
+                <svg
+                  className="w-3 h-3 mt-0.5 text-primary-light shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                </svg>
+                <span className="whitespace-pre-line">{contact.address}</span>
+              </li>
+              <li className="flex items-start gap-2 text-xs text-white/60">
+                <svg
+                  className="w-3 h-3 mt-0.5 text-primary-light shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                </svg>
+                <a
+                  href={`mailto:${contact.email}`}
+                  className="hover:text-primary-light transition-colors"
+                >
+                  {contact.email}
+                </a>
+              </li>
+              <li className="flex items-start gap-2 text-xs text-white/60">
+                <svg
+                  className="w-3 h-3 mt-0.5 text-primary-light shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                </svg>
+                <span>{contact.phone}</span>
+              </li>
+              <li className="flex items-start gap-2 text-xs text-white/60">
+                <svg
+                  className="w-3 h-3 mt-0.5 text-primary-light shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z" />
+                </svg>
+                <span>{contact.fax}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-white/10 pt-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-white/40">
+            <p>
+              &copy; Copyright 2026 Dam-It Dams Inc. - All Rights Reserved.
+            </p>
+            <div className="flex items-center gap-3 flex-wrap justify-center">
+              <a
+                href="#"
+                className="hover:text-primary-light transition-colors"
+              >
+                Terms And Conditions
+              </a>
+              <span className="text-white/20">&bull;</span>
+              <a
+                href="#"
+                className="hover:text-primary-light transition-colors"
+              >
+                Privacy Policy
+              </a>
+              <span className="text-white/20">&bull;</span>
+              <span>Powered By Code Crafted Digital</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
