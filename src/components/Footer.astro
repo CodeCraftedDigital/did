@@ -7,42 +7,42 @@ const navigation = [
 ];
 
 const contact = {
-  address: "646 E. Reid Road, Grand Blanc MI, 48439",
+  address: "646 E. Reid Road, Grand Blanc\nMI, 48439",
   email: "sales@damitdams.com",
   phone: "810-695-695",
   fax: "810-695-1695"
 };
 ---
 
-<footer class="bg-dark-light py-16 lg:py-20 border-t border-white/5">
+<footer class="bg-dark-light py-12 lg:py-16">
   <div class="container-custom">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mb-10">
       <!-- Logo & Description -->
-      <div class="lg:col-span-1">
+      <div>
         <img 
           src="/images/DamItDams-Logo-Light.svg" 
           alt="Dam-It-Dams Logo"
-          class="h-8 mb-4"
+          class="h-6 mb-2"
         />
-        <p class="text-xs text-gray-light uppercase tracking-wider mb-4">
+        <p class="text-[10px] text-white/50 uppercase tracking-wider mb-4">
           Portable Water-Filled Cofferdams
         </p>
-        <p class="text-sm text-gray-light leading-relaxed">
+        <p class="text-xs text-white/50 leading-relaxed">
           Dam-It Dams is a world-class provider of water-filled cofferdams for diverse projects. An award-winning leader, we deliver innovative dewatering and water diversion solutions that ensure safe project initiation, efficiency, and successful completion.
         </p>
       </div>
       
       <!-- Navigation -->
       <div>
-        <h4 class="text-sm font-semibold text-gray-light uppercase tracking-wider mb-4">
+        <h4 class="text-[10px] font-bold text-white/50 uppercase tracking-[0.15em] mb-4">
           Navigation
         </h4>
-        <ul class="space-y-3">
+        <ul class="space-y-2">
           {navigation.map((link) => (
             <li>
               <a 
                 href={link.href}
-                class="text-sm text-gray-light hover:text-primary-light transition-colors"
+                class="text-xs text-white/70 hover:text-primary-light transition-colors"
               >
                 {link.label}
               </a>
@@ -53,34 +53,33 @@ const contact = {
       
       <!-- Contact -->
       <div>
-        <h4 class="text-sm font-semibold text-gray-light uppercase tracking-wider mb-4">
+        <h4 class="text-[10px] font-bold text-white/50 uppercase tracking-[0.15em] mb-4">
           Contact
         </h4>
-        <ul class="space-y-3">
-          <li class="flex items-start gap-2 text-sm text-gray-light">
-            <svg class="w-4 h-4 mt-0.5 text-primary-light flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        <ul class="space-y-2">
+          <li class="flex items-start gap-2 text-xs text-white/70">
+            <svg class="w-3 h-3 mt-0.5 text-primary-light flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
             </svg>
-            <span>{contact.address}</span>
+            <span class="whitespace-pre-line">{contact.address}</span>
           </li>
-          <li class="flex items-start gap-2 text-sm text-gray-light">
-            <svg class="w-4 h-4 mt-0.5 text-primary-light flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          <li class="flex items-start gap-2 text-xs text-white/70">
+            <svg class="w-3 h-3 mt-0.5 text-primary-light flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
             </svg>
             <a href={`mailto:${contact.email}`} class="hover:text-primary-light transition-colors">
               {contact.email}
             </a>
           </li>
-          <li class="flex items-start gap-2 text-sm text-gray-light">
-            <svg class="w-4 h-4 mt-0.5 text-primary-light flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          <li class="flex items-start gap-2 text-xs text-white/70">
+            <svg class="w-3 h-3 mt-0.5 text-primary-light flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
             </svg>
             <span>{contact.phone}</span>
           </li>
-          <li class="flex items-start gap-2 text-sm text-gray-light">
-            <svg class="w-4 h-4 mt-0.5 text-primary-light flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+          <li class="flex items-start gap-2 text-xs text-white/70">
+            <svg class="w-3 h-3 mt-0.5 text-primary-light flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z"/>
             </svg>
             <span>{contact.fax}</span>
           </li>
@@ -89,14 +88,14 @@ const contact = {
     </div>
     
     <!-- Bottom Bar -->
-    <div class="border-t border-white/5 pt-8">
-      <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray">
+    <div class="border-t border-white/10 pt-6">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-white/40">
         <p>&copy; Copyright 2026 Dam-It Dams Inc. - All Rights Reserved.</p>
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-3 flex-wrap justify-center">
           <a href="#" class="hover:text-primary-light transition-colors">Terms And Conditions</a>
-          <span class="text-gray/30">&bull;</span>
+          <span class="text-white/20">&bull;</span>
           <a href="#" class="hover:text-primary-light transition-colors">Privacy Policy</a>
-          <span class="text-gray/30">&bull;</span>
+          <span class="text-white/20">&bull;</span>
           <span>Powered By Code Crafted Digital</span>
         </div>
       </div>
