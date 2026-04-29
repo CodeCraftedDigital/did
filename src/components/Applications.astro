@@ -2,59 +2,54 @@
 const applications = [
   {
     image: "/images/Application-Images-01.jpg",
-    title: "Construction Dewatering",
-    color: "text-primary-light"
+    title: "Construction\nDewatering"
   },
   {
     image: "/images/Application-Images-02.jpg",
-    title: "Flood Control",
-    color: "text-primary-light"
+    title: "Flood\nControl"
   },
   {
     image: "/images/Application-Images-03.jpg",
-    title: "Utility Work",
-    color: "text-primary-light"
+    title: "Utility\nWork"
   },
   {
     image: "/images/Application-Images-04.jpg",
-    title: "Bridge Repair",
-    color: "text-primary-light"
+    title: "Bridge\nRepair"
   },
   {
     image: "/images/Application-Images-05.jpg",
-    title: "Shoreline Protection",
-    color: "text-primary-light"
+    title: "Shoreline\nProtection"
   }
 ];
 ---
 
-<section id="applications" class="py-16 lg:py-24 bg-light">
+<section id="applications" class="py-16 lg:py-20 bg-light">
   <div class="container-custom">
-    <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 mb-12">
+    <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-10">
       <div class="lg:max-w-md">
-        <p class="text-primary text-xs uppercase tracking-[0.2em] font-semibold mb-4">Applications</p>
-        <h2 class="text-3xl lg:text-4xl font-bold text-dark">
+        <p class="text-primary text-[10px] sm:text-xs uppercase tracking-[0.2em] font-bold mb-3">Applications</p>
+        <h2 class="text-2xl lg:text-3xl font-bold text-dark">
           Built for <span class="text-primary-light">Every Application</span>
         </h2>
       </div>
-      <div class="lg:max-w-md">
-        <p class="text-gray leading-relaxed">
+      <div class="lg:max-w-sm lg:pt-8">
+        <p class="text-gray text-sm leading-relaxed">
           Designed for crews that need temporary water control without heavy earthwork, long cleanup, or unnecessary site impact.
         </p>
       </div>
     </div>
     
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6">
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
       {applications.map((app) => (
         <div class="group cursor-pointer">
-          <div class="relative overflow-hidden rounded-lg mb-4 aspect-[4/3]">
+          <div class="relative overflow-hidden rounded-lg mb-3 aspect-[4/3]">
             <img 
               src={app.image} 
-              alt={app.title}
+              alt={app.title.replace('\n', ' ')}
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
             />
           </div>
-          <h3 class={`text-xs sm:text-sm uppercase tracking-wider font-semibold ${app.color}`}>
+          <h3 class="text-primary-light text-[10px] sm:text-xs uppercase tracking-[0.1em] font-bold leading-tight whitespace-pre-line">
             {app.title}
           </h3>
         </div>

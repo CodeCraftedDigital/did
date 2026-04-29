@@ -2,10 +2,10 @@
 
 @theme {
   --color-primary: #0B74B3;
-  --color-primary-light: #76D0E8;
+  --color-primary-light: #00c8ff;
   --color-dark: #0a1628;
-  --color-dark-light: #0f1f33;
-  --color-dark-lighter: #162a40;
+  --color-dark-light: #0d1a2d;
+  --color-dark-lighter: #132238;
   --color-light: #f0f4f8;
   --color-gray: #6b7280;
   --color-gray-light: #9ca3af;
@@ -34,11 +34,11 @@
   }
   
   .btn-primary {
-    @apply inline-flex items-center justify-center px-6 py-3 border-2 border-primary-light text-primary-light font-semibold text-sm uppercase tracking-wider hover:bg-primary-light hover:text-dark transition-all duration-300;
+    @apply inline-flex items-center justify-center px-6 py-3 border border-primary-light text-primary-light font-semibold text-sm uppercase tracking-wider hover:bg-primary-light hover:text-dark transition-all duration-300;
   }
   
   .btn-primary-filled {
-    @apply inline-flex items-center justify-center px-6 py-3 bg-primary-light text-dark font-semibold text-sm uppercase tracking-wider hover:bg-primary hover:text-white transition-all duration-300;
+    @apply inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-semibold text-sm uppercase tracking-wider hover:bg-primary-light hover:text-dark transition-all duration-300;
   }
   
   .section-label {
@@ -46,6 +46,6 @@
   }
   
   .gradient-overlay {
-    @apply absolute inset-0 bg-gradient-to-b from-dark/80 via-dark/60 to-dark/80;
+    @apply absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/70 to-dark/50;
   }
 }
