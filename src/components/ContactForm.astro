@@ -1,0 +1,97 @@
+---
+
+---
+
+<section id="contact" class="py-16 lg:py-24 relative overflow-hidden">
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img 
+      src="/images/Contact-BG.jpg" 
+      alt="Contact background"
+      class="w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-dark/90"></div>
+  </div>
+  
+  <div class="relative z-10 container-custom">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+      <!-- Left Column -->
+      <div class="flex flex-col justify-center">
+        <p class="section-label">Get A Quote</p>
+        <h2 class="text-3xl lg:text-4xl font-bold mb-6">
+          Ready for <span class="text-primary-light italic">Your</span><br />
+          <span class="italic">Next Project?</span>
+        </h2>
+        <p class="text-gray-light leading-relaxed max-w-md">
+          Send the basics and our team will help determine the right water-filled cofferdam configuration for your site.
+        </p>
+      </div>
+      
+      <!-- Right Column - Form -->
+      <div>
+        <form class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="fullName" class="block text-sm text-gray-light mb-2">Full name</label>
+            <input 
+              type="text" 
+              id="fullName" 
+              name="fullName"
+              placeholder="First Last"
+              class="w-full bg-dark-lighter border border-white/10 rounded px-4 py-3 text-light placeholder:text-gray focus:outline-none focus:border-primary-light/50 transition-colors"
+            />
+          </div>
+          
+          <div>
+            <label for="email" class="block text-sm text-gray-light mb-2">Email address</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email"
+              placeholder="name@domain.com"
+              class="w-full bg-dark-lighter border border-white/10 rounded px-4 py-3 text-light placeholder:text-gray focus:outline-none focus:border-primary-light/50 transition-colors"
+            />
+          </div>
+          
+          <div>
+            <label for="phone" class="block text-sm text-gray-light mb-2">Phone number</label>
+            <input 
+              type="tel" 
+              id="phone" 
+              name="phone"
+              placeholder="000-000-0000"
+              class="w-full bg-dark-lighter border border-white/10 rounded px-4 py-3 text-light placeholder:text-gray focus:outline-none focus:border-primary-light/50 transition-colors"
+            />
+          </div>
+          
+          <div>
+            <label for="location" class="block text-sm text-gray-light mb-2">Project location</label>
+            <input 
+              type="text" 
+              id="location" 
+              name="location"
+              placeholder="Michigan"
+              class="w-full bg-dark-lighter border border-white/10 rounded px-4 py-3 text-light placeholder:text-gray focus:outline-none focus:border-primary-light/50 transition-colors"
+            />
+          </div>
+          
+          <div class="sm:col-span-2">
+            <label for="message" class="block text-sm text-gray-light mb-2">Message</label>
+            <textarea 
+              id="message" 
+              name="message"
+              rows="4"
+              placeholder="Tell us about water depth, application, timeline, and site conditions"
+              class="w-full bg-dark-lighter border border-white/10 rounded px-4 py-3 text-light placeholder:text-gray focus:outline-none focus:border-primary-light/50 transition-colors resize-none"
+            ></textarea>
+          </div>
+          
+          <div class="sm:col-span-2">
+            <button type="submit" class="w-full btn-primary-filled py-4">
+              Get A Quote
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
