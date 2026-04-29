@@ -31,19 +31,19 @@ const steps = [
   <div class="relative z-10 container-custom">
     <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-10">
       <div class="lg:max-w-md">
-        <p class="text-primary-light text-[10px] sm:text-xs uppercase tracking-[0.2em] font-bold mb-3">How It Works</p>
-        <h2 class="text-2xl lg:text-3xl font-bold text-white">
-          <span class="italic">Simple.</span> <span class="text-primary-light italic">Fast.</span> <span class="italic">Effective.</span>
+        <p class="text-primary-light text-[10px] uppercase tracking-[0.2em] font-bold mb-3">How It Works</p>
+        <h2 class="text-2xl lg:text-3xl text-white">
+          <span class="italic font-light">Simple.</span> <span class="text-primary-light italic font-light">Fast.</span> <span class="italic font-light">Effective.</span>
         </h2>
       </div>
-      <div class="lg:max-w-sm lg:pt-8">
-        <p class="text-white/70 text-sm leading-relaxed">
+      <div class="lg:max-w-md lg:pt-6">
+        <p class="text-white/60 text-sm leading-relaxed">
           The system uses on-site water to form a stable temporary barrier, then drains and removes cleanly when the project is complete.
         </p>
       </div>
     </div>
     
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mb-10">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 mb-10">
       {steps.map((step) => (
         <div class="group">
           <div class="relative overflow-hidden rounded-lg mb-4 aspect-[4/3]">
@@ -53,17 +53,12 @@ const steps = [
               class="w-full h-full object-cover"
             />
           </div>
-          <div class="flex items-start gap-2">
-            <span class="text-primary-light font-bold text-xs">{step.number}.</span>
-            <div>
-              <h3 class="text-primary-light text-[10px] sm:text-xs uppercase tracking-[0.1em] font-bold mb-2">
-                {step.title}
-              </h3>
-              <p class="text-white/60 text-xs leading-relaxed">
-                {step.description}
-              </p>
-            </div>
-          </div>
+          <p class="text-primary-light text-[10px] uppercase tracking-[0.1em] font-bold mb-1">
+            {step.number}. {step.title}
+          </p>
+          <p class="text-white/50 text-xs leading-relaxed">
+            {step.description}
+          </p>
         </div>
       ))}
     </div>
