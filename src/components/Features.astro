@@ -25,16 +25,16 @@ const features = [
 
 <section class="py-16 lg:py-20 bg-light">
   <div class="container-custom">
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
       {features.map((feature) => (
-        <div class="bg-white border border-gray-200 rounded-lg p-6 lg:p-8 text-center">
-          <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-            <img src={feature.icon} alt={feature.title} class="w-14 h-14 object-contain" />
+        <div class="bg-white border border-gray-200 rounded-lg p-5 lg:p-6 text-center">
+          <div class="flex items-center justify-center mb-4 h-16">
+            <img src={feature.icon} alt={feature.title} class="h-14 w-auto object-contain" />
           </div>
-          <h3 class="text-primary-light text-[10px] sm:text-xs uppercase tracking-[0.15em] font-bold mb-2">
+          <h3 class="text-primary-light text-[10px] uppercase tracking-[0.15em] font-bold mb-2">
             {feature.title}
           </h3>
-          <p class="text-gray text-xs sm:text-sm leading-relaxed">
+          <p class="text-gray text-xs leading-relaxed">
             {feature.description}
           </p>
         </div>

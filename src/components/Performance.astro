@@ -26,23 +26,23 @@ const benefits = [
 <section id="performance" class="py-16 lg:py-20 bg-dark-light">
   <div class="container-custom">
     <div class="text-center mb-12">
-      <p class="text-primary-light text-[10px] sm:text-xs uppercase tracking-[0.2em] font-bold mb-3">Performance</p>
-      <h2 class="text-2xl lg:text-3xl font-bold text-white">
+      <p class="text-primary-light text-[10px] uppercase tracking-[0.2em] font-bold mb-3">Performance</p>
+      <h2 class="text-2xl lg:text-3xl font-bold text-white leading-tight">
         Engineered for <span class="text-primary-light">Performance.</span><br />
         Built for <span class="text-primary-light">Contractors.</span>
       </h2>
     </div>
     
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
       {benefits.map((benefit) => (
-        <div class="bg-dark border border-white/10 rounded-lg p-5 lg:p-6">
-          <div class="w-12 h-12 mb-4 flex items-center justify-center">
-            <img src={benefit.icon} alt={benefit.title} class="w-10 h-10 object-contain" />
+        <div class="bg-dark/50 border border-white/10 rounded-lg p-5">
+          <div class="flex items-center justify-center h-12 mb-4">
+            <img src={benefit.icon} alt={benefit.title} class="h-10 w-auto object-contain" />
           </div>
-          <h3 class="text-primary-light text-[10px] sm:text-xs uppercase tracking-[0.1em] font-bold mb-2">
+          <h3 class="text-primary-light text-[10px] uppercase tracking-[0.1em] font-bold mb-2">
             {benefit.title}
           </h3>
-          <p class="text-white/60 text-xs leading-relaxed">
+          <p class="text-white/50 text-xs leading-relaxed">
             {benefit.description}
           </p>
         </div>
